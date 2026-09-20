@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atlantic Wildfire Mitigation &amp; Co | Wildfire readiness for Nova Scotia homes</title>
+<meta name="description" content="Property wildfire assessments, clean-up and maintenance for Nova Scotia homes, cottages and communities.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231d5946'/%3E%3Cpath d='M32 10c2 9 11 13 11 24a11 11 0 0 1-22 0c0-6 3-9 6-13 1 3 3 5 4 5-1-6-1-11 1-16z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f1; --surface:#ffffff; --ink:#13221b; --muted:#4f5f57; --line:#d4dbd5;
+  --brand:#1d5946; --brand-deep:#123b2e; --on-brand:#ffffff; --ember:#c94a17; --on-ember:#ffffff; --tint:#e4efe8;
+  --z1:#c94a17; --z2:#e08a3c; --z3:#e9c266; --z4:#b8d3c1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1714; --surface:#17211d; --ink:#e9efeb; --muted:#a3b3ab; --line:#2b3a34;
+    --brand:#5fb896; --brand-deep:#a9e0c8; --on-brand:#0b1712; --ember:#ff8a4d; --on-ember:#1a0d05; --tint:#1a2a23;
+    --z1:#ff8a4d; --z2:#d9803a; --z3:#8f7a34; --z4:#2f4a3c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1714; --surface:#17211d; --ink:#e9efeb; --muted:#a3b3ab; --line:#2b3a34;
+  --brand:#5fb896; --brand-deep:#a9e0c8; --on-brand:#0b1712; --ember:#ff8a4d; --on-ember:#1a0d05; --tint:#1a2a23;
+  --z1:#ff8a4d; --z2:#d9803a; --z3:#8f7a34; --z4:#2f4a3c;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;line-height:1.12;margin:0 0 .5em;font-weight:700;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,6vw,3.7rem)} h2{font-size:clamp(1.7rem,4vw,2.5rem)} h3{font-size:1.25rem}
+p{margin:0 0 1em}
+a{color:var(--brand)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ember);margin:0 0 .8em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid var(--brand);background:var(--brand);color:var(--on-brand);font-size:1rem;cursor:pointer;font-family:inherit}
+.btn.ember{background:var(--ember);border-color:var(--ember);color:var(--on-ember)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.nav{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;line-height:1.1}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:.72rem}
+.navlinks{display:flex;gap:22px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+@media (max-width:760px){.navlinks .lnk{display:none}}
+.hero{padding:56px 0 64px;background:linear-gradient(180deg,var(--tint),var(--bg))}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero .grid{grid-template-columns:1fr}}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 14px}
+.trust{font-size:.9rem;color:var(--muted)}
+.zones{width:100%;max-width:420px;margin:0 auto;display:block}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.85rem;margin-top:10px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--on-brand);align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+.card p{color:var(--muted);margin:0}
+.card .tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--brand);background:var(--tint);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.tint{background:var(--tint)}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.facts b{color:var(--brand)}
+.promise{border-left:6px solid var(--ember);background:var(--surface);border-radius:0 16px 16px 0;padding:22px 24px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{padding:8px 0 8px 32px;position:relative;border-bottom:1px solid var(--line)}
+.checks li::before{content:"";position:absolute;left:0;top:12px;width:18px;height:18px;border-radius:50%;background:var(--brand)}
+.checks li::after{content:"";position:absolute;left:6px;top:16px;width:5px;height:9px;border:solid var(--on-brand);border-width:0 2px 2px 0;transform:rotate(45deg)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;min-height:48px}
+details p{color:var(--muted)}
+.season{background:#123b2e;color:#fff;border-radius:20px;padding:30px}
+.season h2,.season h3{color:#fff}
+.season a{color:#ffd9c2}
+.season .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:14px}
+.season .row div{border-top:2px solid rgba(255,255,255,.35);padding-top:10px;font-size:.95rem}
+form{display:grid;gap:14px}
+.field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px}
+input,select,textarea{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:600px){.row2{grid-template-columns:1fr}}
+.note{font-size:.85rem;color:var(--muted)}
+.warn{background:#fff2d9;color:#6b3f00;border-radius:10px;padding:10px 12px;font-size:.9rem;display:none}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer p{margin:0 0 .8em;max-width:60em}
+.ph{background:#fff2d9;color:#6b3f00;padding:0 4px;border-radius:4px}
+:focus-visible{outline:3px solid var(--ember);outline-offset:2px}
+@media print{.nav{display:none}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Atlantic Wildfire Mitigation &amp; Co home">
+      <!-- PLACEHOLDER LOGO: replace with your own -->
+      <svg viewBox="0 0 64 64" role="img" aria-label="Atlantic Wildfire Mitigation and Co logo"><circle cx="32" cy="32" r="30" fill="var(--brand)"/><path d="M32 10c2 9 11 13 11 24a11 11 0 0 1-22 0c0-6 3-9 6-13 1 3 3 5 4 5-1-6-1-11 1-16z" fill="var(--on-brand)"/><path d="M32 39c1 3 4 5 4 8a4 4 0 0 1-8 0c0-3 3-5 4-8z" fill="#e8a33d"/></svg>
+      <span>Atlantic Wildfire<br>Mitigation &amp; Co<small>Nova Scotia</small></span>
+    </a>
+    <nav class="navlinks" aria-label="Main">
+      <a class="lnk" href="#services">Services</a>
+      <a class="lnk" href="#how">How it works</a>
+      <a class="lnk" href="#faq">FAQ</a>
+      <a class="btn ember" href="#contact">Request a visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Wildfire readiness for Nova Scotia homes</p>
+      <h1>Protect your home before fire season starts.</h1>
+      <p class="lead">We assess your property, give you a clear written plan you can keep, and can do the clean-up and maintenance with you. Homes, cottages and communities across Nova Scotia.</p>
+      <div class="cta">
+        <a class="btn ember" href="#contact">Request a property visit</a>
+        <a class="btn ghost" href="#services">See services</a>
+      </div>
+      <p class="trust">Wildfire risk season in Nova Scotia runs March 15 to October 15.</p>
+    </div>
+    <div aria-label="Diagram of wildfire zones around a home">
+      <svg class="zones" viewBox="0 0 400 400" role="img" aria-label="Zones around a house: 0 to 1.5 metres, to 10 metres, to 30 metres, to 100 metres">
+        <circle cx="200" cy="200" r="190" fill="var(--z4)"/>
+        <circle cx="200" cy="200" r="140" fill="var(--z3)"/>
+        <circle cx="200" cy="200" r="90" fill="var(--z2)"/>
+        <circle cx="200" cy="200" r="50" fill="var(--z1)"/>
+        <path d="M168 205 L200 176 L232 205 L232 232 L168 232 Z" fill="var(--surface)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
+        <rect x="192" y="212" width="16" height="20" fill="var(--ink)"/>
+      </svg>
+      <div class="legend">
+        <span><i style="background:var(--z1)"></i>0 to 1.5 m: keep clear</span>
+        <span><i style="background:var(--z2)"></i>to 10 m: fuel low, spaced</span>
+        <span><i style="background:var(--z3)"></i>10 to 30 m: thin and clean</span>
+        <span><i style="background:var(--z4)"></i>30 to 100 m: wider landscape</span>
+      </div>
+      <p class="note" style="margin-top:10px">Not to scale. Based on general FireSmart concepts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Why now</p>
+      <h2>Wildfire is a Nova Scotia problem.</h2>
+      <p>In 2023, wildfires burned in Shelburne County and in the Halifax area near Upper Tantallon. Since then, homeowners and insurers have been paying closer attention to what surrounds each property.</p>
+      <p>Most of what protects a home is close to the house: what's against the walls, under the deck, on the roof and in the gutters, and how close the trees are.</p>
+    </div>
+    <ul class="facts">
+      <li><b>1.5 m</b> strip around the house and deck kept free of anything that can burn.</li>
+      <li><b>About 10 m</b> is a common target distance between the house and spruce, fir, pine or cedar.</li>
+      <li><b>About 3 m</b> between tree crowns makes it harder for fire to travel tree to tree.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="how" class="tint">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Four steps, no jargon.</h2>
+    <div class="cards">
+      <div class="card"><span class="n">1</span><h3>Tell us about your property</h3><p>Send a quick request. We'll ask a few questions and book a visit.</p></div>
+      <div class="card"><span class="n">2</span><h3>We walk your property with you</h3><p>We check each zone around your home and take photos as we go.</p></div>
+      <div class="card"><span class="n">3</span><h3>You get a plan you keep</h3><p>A clear written report with priorities, a seasonal calendar and a dated record of your property.</p></div>
+      <div class="card"><span class="n">4</span><h3>Do it yourself or with us</h3><p>Use the plan on your own, or ask us for a quote and help with the work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>Start with a plan. Add help when you want it.</h2>
+    <div class="cards">
+      <div class="card"><span class="tag">Know your risk</span><h3>Readiness Plan</h3><p>On-site assessment and a written plan for your home, cottage or business, with photos and a yearly checklist.</p></div>
+      <div class="card"><span class="tag">Get it done</span><h3>Zone 1 Clear-Out</h3><p>Clear combustible material from beside your walls and deck, clean under the deck and gutters, and move firewood away.</p></div>
+      <div class="card"><span class="tag">Get it done</span><h3>Ember-proofing</h3><p>Screen vents and seal gaps where embers can get in.</p></div>
+      <div class="card"><span class="tag">Get it done</span><h3>Vegetation mitigation</h3><p>Limbing, ladder-fuel removal and chipping. Larger tree work is done with a qualified arborist.</p></div>
+      <div class="card"><span class="tag">Keep it up</span><h3>Annual maintenance</h3><p>Spring and fall visits so your property stays in shape season after season.</p></div>
+      <div class="card"><span class="tag">Groups</span><h3>Communities and associations</h3><p>Assessments for cottage associations, condo boards, campgrounds and neighbourhoods.</p></div>
+    </div>
+    <p class="note" style="margin-top:14px">Every property is different, so we give written quotes. Ask for one below.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">What you get</p>
+      <h2>A plan worth keeping.</h2>
+      <p>Your report isn't a one-time checklist. It's a document you can come back to each spring and fall.</p>
+      <ul class="checks">
+        <li>Plain-language results and your first three steps</li>
+        <li>Zone-by-zone findings with photos</li>
+        <li>A priority action list you can tick off</li>
+        <li>A year-round maintenance calendar</li>
+        <li>A "be ready to leave" checklist</li>
+        <li>A dated property record for your files</li>
+      </ul>
+    </div>
+    <div class="promise">
+      <h3>An honest promise</h3>
+      <p>We can't make a property fireproof, and we won't tell you we can. We can help you reduce the things that let fire reach your home, and tell you what's worth doing first.</p>
+      <p style="margin:0">We also don't promise changes to your insurance. Ask your insurer what it looks for, and we'll give you a report you can share.</p>
+    </div>
+  </div>
+</section>
+
+<section id="season">
+  <div class="wrap">
+    <div class="season">
+      <p class="eyebrow" style="color:#ffd9c2">Know the rules</p>
+      <h2>Fire season rules in Nova Scotia</h2>
+      <div class="row">
+        <div><b>Season</b><br>Wildfire risk season runs March 15 to October 15.</div>
+        <div><b>Daily burn check</b><br>Restrictions update at 2 p.m. daily. No brush burning or campfires from 8 a.m. to 2 p.m. during the season.</div>
+        <div><b>The fine</b><br>Breaking burn restrictions can carry a $25,000 fine.</div>
+        <div><b>Report a fire</b><br>Call 1-800-565-2224 or 911.</div>
+      </div>
+      <p style="margin:16px 0 0;font-size:.9rem">Check the current status at <a href="https://novascotia.ca/burnsafe" rel="noopener">novascotia.ca/burnsafe</a>. Rules can change, so always check the official source.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <p class="eyebrow">Questions</p>
+    <h2>Good questions we hear.</h2>
+    <details><summary>Isn't there a free assessment?</summary><p>Some municipalities, including Halifax, offer free FireSmart property assessments. That's a great starting point. If you'd like a written plan you keep, priced actions, and someone who can do the work, that's what we offer.</p></details>
+    <details><summary>Will this lower my insurance?</summary><p>We can't promise that. Insurers are paying closer attention to what surrounds a property, so ask yours what it looks for. We'll give you a dated report with photos that you can share.</p></details>
+    <details><summary>Are you FireSmart certified?</summary><p>Our assessments are based on general FireSmart concepts. We are not affiliated with FireSmart Canada unless stated in writing.</p></details>
+    <details><summary>Where do you work?</summary><p>Nova Scotia. Tell us your town in the request form and we'll confirm.</p></details>
+    <details><summary>When do you work?</summary><p>Mostly during the growing season. Work can pause on days when provincial burn restrictions or woods closures apply, and we reschedule at no charge.</p></details>
+    <details><summary>Do I have to be home?</summary><p>For the assessment, yes. It's the best way to walk the property together and answer your questions.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="tint">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Get started</p>
+      <h2>Request a property visit or a quote.</h2>
+      <p>Tell us a little about your property. We'll reply within one business day.</p>
+      <p><strong>Phone:</strong> <span data-site="phone">Coming soon</span><br>
+      <strong>Email:</strong> <a data-site="email" href="mailto:mitigation@atlanticwildfire.com">mitigation@atlanticwildfire.com</a></p>
+      <p class="note">Please don't send your full street address here. Your town is enough. We'll confirm the address by phone.</p>
+    </div>
+    <form id="lead" novalidate>
+      <div class="row2">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" autocomplete="name" required></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="f-town">Town or community</label><input id="f-town"></div>
+      </div>
+      <div class="field"><label for="f-type">Property type</label>
+        <select id="f-type"><option>Year-round home</option><option>Seasonal cottage</option><option>Condo or multi-unit</option><option>Business</option><option>Campground or association</option><option>Other</option></select></div>
+      <div class="field"><label for="f-svc">I'm interested in</label>
+        <select id="f-svc"><option>Readiness Plan (assessment)</option><option>Zone 1 Clear-Out</option><option>Ember-proofing</option><option>Vegetation mitigation</option><option>Annual maintenance</option><option>Community or association package</option><option>Not sure yet</option></select></div>
+      <div class="field"><label for="f-msg">Anything we should know?</label><textarea id="f-msg"></textarea></div>
+      <button class="btn ember" type="submit">Send request by email</button>
+      <div class="warn" id="warn">Add your email address in the SITE settings at the top of this page's script to make this form work.</div>
+      <p class="note">This opens your email app with the message ready to send. We use your details only to reply to your request.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Atlantic Wildfire Mitigation &amp; Co</strong> · Nova Scotia</p>
+    <p>Assessments record observable wildfire risk factors on the date of the visit. They are not a guarantee that a property will survive a wildfire, and they do not promise any change to insurance coverage or premiums. Atlantic Wildfire Mitigation &amp; Co is not affiliated with FireSmart Canada unless stated in writing. Recommendations are based on general FireSmart concepts.</p>
+    <p>FireSmart, Intelli-feu and other associated Marks are trademarks of Canadian Interagency Forest Fire Centre Inc.</p>
+    <p>Questions: <a href="mailto:mitigation@atlanticwildfire.com">mitigation@atlanticwildfire.com</a></p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+/* ===== SITE SETTINGS: fill these in ===== */
+const SITE = { phone:"", email:"mitigation@atlanticwildfire.com" };
+
+(function(){
+  const setLink=(key,href,text)=>{ document.querySelectorAll('[data-site="'+key+'"]').forEach(a=>{ a.href=href; a.textContent=text; }); };
+  if(SITE.phone){ document.querySelectorAll('[data-site="phone"]').forEach(el=>{ const a=document.createElement("a"); a.href="tel:"+SITE.phone.replace(/[^+\d]/g,""); a.textContent=SITE.phone; el.replaceWith(a); }); }
+  if(SITE.email) setLink("email","mailto:"+SITE.email,SITE.email);
+  const form=document.getElementById("lead"), warn=document.getElementById("warn");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(!SITE.email){ warn.style.display="block"; return; }
+    warn.style.display="none";
+    const v=id=>document.getElementById(id).value.trim();
+    const body=["Name: "+v("f-name"),"Phone: "+v("f-phone"),"Email: "+v("f-email"),"Town: "+v("f-town"),"Property type: "+v("f-type"),"Interested in: "+v("f-svc"),"","Notes:",v("f-msg")].join("\n");
+    location.href="mailto:"+SITE.email+"?subject="+encodeURIComponent("Property visit request")+"&body="+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
