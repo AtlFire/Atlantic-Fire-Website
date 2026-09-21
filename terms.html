@@ -31,7 +31,7 @@
   --logo-r1:#7fb6d1; --logo-r2:#d8c7a6; --logo-disc:#9cc5b5; --logo-inner:#16352c;
 }
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 140px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.55}
 h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.1;margin:0 0 .5em;font-weight:800;letter-spacing:-.02em}
@@ -125,10 +125,20 @@ footer p{margin:0 0 .8em;max-width:60em}
 .fsmall{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.85rem}
 .fsmall p{margin:0 0 .8em;max-width:62em}
 .credlist{margin:8px 0 0}
+
+.banner{background:#16352c;color:#fff;font-size:.92rem;line-height:1.35;position:relative}
+.banner-in{max-width:1080px;margin:0 auto;padding:9px 52px 9px 20px}
+.banner strong{color:#fff}
+.banner a{color:#cfe6f0;font-weight:700;text-decoration:underline;white-space:nowrap}
+.banner .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#e8a33d;margin-right:8px;vertical-align:1px}
+.banner-x{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;background:transparent;color:#fff;font-size:24px;line-height:1;cursor:pointer}
+.pre-pill{display:inline-flex;align-items:center;gap:8px;background:color-mix(in srgb,#e8a33d 22%,transparent);color:var(--ink);border:1px solid color-mix(in srgb,#e8a33d 60%,transparent);border-radius:999px;padding:5px 14px;font-weight:700;font-size:.9rem;margin:0 0 14px}
+.pre-pill i{width:9px;height:9px;border-radius:50%;background:#e8a33d;display:block}
 </style>
 </head>
 <body>
 <header class="nav">
+  <div class="banner" id="banner" role="region" aria-label="Announcement"><div class="banner-in"><span class="dot"></span><strong>Pre-booking opens in January 2027.</strong> Leave your details and we'll let you know as soon as it opens. <a href="index.html#contact">Get notified</a></div><button class="banner-x" id="banner-x" type="button" aria-label="Dismiss announcement">&times;</button></div>
   <div class="wrap">
     <a class="brand" href="index.html#top" aria-label="Atlantic Wildfire Mitigation &amp; Co home">
       <svg viewBox="0 0 100 100" role="img" aria-label="Atlantic Wildfire Mitigation and Co logo"><circle cx="50" cy="50" r="47" fill="none" style="stroke:var(--logo-r1)" stroke-width="4"/><circle cx="50" cy="50" r="38" fill="none" style="stroke:var(--logo-r2)" stroke-width="3" stroke-dasharray="6 5"/><circle cx="50" cy="50" r="29" style="fill:var(--logo-disc)"/><g transform="translate(25 26) scale(.5)"><path d="M50 8L70 36H60L78 60H64L84 82H16L36 60H22L40 36H30Z" style="fill:var(--logo-inner)"/></g></svg>
@@ -273,6 +283,9 @@ const SITE = { phone:"(902) 237-8909", email:"mitigation@atlanticwildfire.com" }
     });
   }
 })();
+</script>
+<script>
+(function(){var b=document.getElementById("banner"),x=document.getElementById("banner-x");if(!b)return;try{if(sessionStorage.getItem("awm-banner")==="x"){b.remove();return;}}catch(e){}x.addEventListener("click",function(){try{sessionStorage.setItem("awm-banner","x");}catch(e){}b.remove();});})();
 </script>
 </body>
 </html>
