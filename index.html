@@ -64,6 +64,19 @@ section{padding:64px 0}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card{position:relative;display:flex;flex-direction:column}
+.svc-more{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.svc-more summary{cursor:pointer;list-style:none;font-weight:700;color:var(--brand);font-size:.95rem;display:flex;align-items:center;gap:6px}
+.svc-more summary::-webkit-details-marker{display:none}
+.svc-more summary::after{content:"\2193";font-size:.8em;transition:transform .15s}
+.svc-more[open] summary::after{transform:rotate(180deg)}
+.svc-more summary:hover{text-decoration:underline}
+.svc-more h4{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.svc-more h4:first-of-type{margin-top:12px}
+.svc-more ul{margin:0 0 4px;padding-left:1.1em}
+.svc-more li{margin:4px 0;font-size:.95rem}
+.svc-more p{font-size:.95rem;color:var(--muted);margin:6px 0 0}
+
 .card .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--on-brand);align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
 .card p{color:var(--muted);margin:0}
 .card .tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--brand);background:var(--tint);border-radius:999px;padding:3px 10px;margin-bottom:10px}
@@ -165,7 +178,7 @@ footer p{margin:0 0 .8em;max-width:60em}
         <a class="btn ember" href="#contact">Request a property visit</a>
         <a class="btn ghost" href="#services">See services</a>
       </div>
-      <p class="trust">Wildfire risk season in Nova Scotia runs March 15 to October 15.</p>
+      <p class="trust">Wildfire season in Nova Scotia runs March 15 to October 15.</p>
     </div>
     <div aria-label="Diagram of wildfire zones around a home">
       <svg class="zones" viewBox="0 0 400 400" role="img" aria-label="Zones around a house: 0 to 1.5 metres, to 10 metres, to 30 metres, to 100 metres">
@@ -191,8 +204,8 @@ footer p{margin:0 0 .8em;max-width:60em}
   <div class="wrap split">
     <div>
       <p class="eyebrow">Why now</p>
-      <h2>Wildfire is a Nova Scotia problem.</h2>
-      <p>In 2023, wildfires burned in Shelburne County and in the Halifax area near Upper Tantallon. Since then, homeowners and insurers have been paying closer attention to what surrounds each property.</p>
+      <h2>Wildfires are a Nova Scotia problem.</h2>
+      <p>In 2023, wildfires burned in Shelburne County and Halifax County, including the area near Upper Tantallon. Since then, homeowners and insurers have been paying closer attention to what surrounds each property.</p>
       <p>Most of what protects a home is close to the house: what's against the walls, under the deck, on the roof and in the gutters, and how close the trees are.</p>
     </div>
     <ul class="facts">
@@ -206,7 +219,7 @@ footer p{margin:0 0 .8em;max-width:60em}
 <section id="how" class="tint">
   <div class="wrap">
     <p class="eyebrow">How it works</p>
-    <h2>Four steps, no jargon.</h2>
+    <h2>Four easy steps, no jargon.</h2>
     <div class="cards">
       <div class="card"><span class="n">1</span><h3>Tell us about your property</h3><p>Send a quick request. We'll ask a few questions and book a visit.</p></div>
       <div class="card"><span class="n">2</span><h3>We walk your property with you</h3><p>We check each zone around your home and take photos as we go.</p></div>
@@ -221,12 +234,77 @@ footer p{margin:0 0 .8em;max-width:60em}
     <p class="eyebrow">Services</p>
     <h2>Start with a plan. Add help when you want it.</h2>
     <div class="cards">
-      <div class="card"><span class="tag">Know your risk</span><h3>Property Assessment &amp; Readiness Plan</h3><p>We walk your property with you, check each zone around your home, and give you a written plan you can keep, with photos, priorities and a yearly checklist.</p></div>
-      <div class="card"><span class="tag">Get it done</span><h3>Mitigation Work</h3><p>We carry out the work outlined in your plan: clearing material from around the house, cleaning under decks and gutters, sealing gaps and openings, limbing and thinning vegetation, and chipping or hauling away. This is a separate service from the assessment and plan, and you get a written quote before any work starts.</p></div>
-      <div class="card"><span class="tag">Keep it up</span><h3>Annual Maintenance</h3><p>Spring and fall visits so your property stays in shape season after season.</p></div>
-      <div class="card"><span class="tag">Groups</span><h3>Communities and Associations</h3><p>Assessments for cottage associations, condo boards, campgrounds and neighbourhoods.</p></div>
+      <div class="card"><span class="tag">Know your risk</span><h3>Property Assessment &amp; Readiness Plan</h3><p>We walk your property with you, check each zone around your home, and give you a written plan you can keep, with photos, priorities and a yearly checklist. <strong>From $350.</strong> If you book mitigation work with us, half of what you paid for your plan is credited toward the cost of the work.</p>
+        <details class="svc-more"><summary>See what's included</summary>
+          <h4>The visit</h4>
+          <ul>
+            <li>An on-site walk-through with you, usually about 1 to 1.5 hours</li>
+            <li>Every zone checked: right against the house, out to 10 m, 10 to 30 m, and the wider property</li>
+            <li>Driveway, access and water source reviewed for emergency vehicles</li>
+          </ul>
+          <h4>Your written plan</h4>
+          <ul>
+            <li>Photos of the specific spots we flag</li>
+            <li>A priority action list, ranked so you know what to do first</li>
+            <li>Rough cost bands for each action, whether you do it yourself or hire us</li>
+            <li>A year-round maintenance calendar</li>
+            <li>An emergency preparedness checklist for your household</li>
+            <li>A dated property record you can keep on file or share with your insurer</li>
+          </ul>
+          <p>The plan is yours to keep, whether or not you book any further work.</p>
+        </details></div>
+      <div class="card"><span class="tag">Get it done</span><h3>Mitigation Work</h3><p>We carry out the work outlined in your plan: clearing material from around the house, cleaning under decks and gutters, sealing gaps and openings, limbing and thinning vegetation, and chipping or hauling away. This is a separate service from the assessment and plan, and you get a written quote before any work starts. <strong>Typically $500 to $2,500</strong>, depending on scope.</p>
+        <details class="svc-more"><summary>See what's included</summary>
+          <h4>Around the house</h4>
+          <ul>
+            <li>Clearing combustible material from the strip against your walls and deck</li>
+            <li>Cleaning out under decks and porches</li>
+            <li>Gutter and roof-valley clean-out</li>
+            <li>Screening or sealing vents and gaps where embers could get in</li>
+          </ul>
+          <h4>Around the property</h4>
+          <ul>
+            <li>Limbing and thinning trees and shrubs close to the house</li>
+            <li>Removing dead, downed and ladder-fuel material further out</li>
+            <li>Moving firewood piles away from the house</li>
+            <li>Chipping or hauling debris away</li>
+          </ul>
+          <p>Larger tree work or felling is arranged with a qualified arborist. Every job starts with a written quote and ends with before-and-after photos and a walk-through with you.</p>
+        </details></div>
+      <div class="card"><span class="tag">Keep it up</span><h3>Annual Maintenance</h3><p>Spring and fall visits so your property stays in shape season after season. <strong>$900 to $1,600 per year</strong>, depending on property size.</p>
+        <details class="svc-more"><summary>See what's included</summary>
+          <h4>Two visits a year</h4>
+          <ul>
+            <li>A spring visit to clear winter debris and re-check your priority zones</li>
+            <li>A fall visit to clear leaves, needles and new growth before winter</li>
+            <li>Gutters, roof valleys and the strip against the house kept clear</li>
+            <li>New growth, fallen branches and regrowth cut back</li>
+          </ul>
+          <h4>After each visit</h4>
+          <ul>
+            <li>Updated photos added to your property record</li>
+            <li>A short written note on anything new we noticed</li>
+            <li>Priority booking for the next season</li>
+          </ul>
+          <p>Best suited to a property that has already had a Readiness Plan and, ideally, Mitigation Work completed.</p>
+        </details></div>
+      <div class="card"><span class="tag">Groups</span><h3>Communities and Associations</h3><p>Assessments for cottage associations, condo boards, campgrounds and neighbourhoods. <strong>Save 15% off standard pricing</strong> for groups of 10 or more properties.</p>
+        <details class="svc-more"><summary>See what's included</summary>
+          <h4>For each property</h4>
+          <ul>
+            <li>The same on-site walk-through and written plan as our individual Readiness Plan</li>
+            <li>A templated report, so results are easy to compare across the group</li>
+          </ul>
+          <h4>For the group</h4>
+          <ul>
+            <li>One shared summary highlighting common issues, like shared tree lines or road access</li>
+            <li>Coordinated scheduling to visit properties efficiently and minimize disruption</li>
+            <li>An optional group information session, in person or by request</li>
+          </ul>
+          <p>Get in touch to talk about your group's size and area, and we'll put together a plan and a quote.</p>
+        </details></div>
     </div>
-    <p class="note" style="margin-top:14px">Mitigation work follows a written Readiness Plan. If you don't have one yet, we start there. Every property is different, so we give written quotes.</p>
+    <p class="note" style="margin-top:14px">Mitigation work follows a written Readiness Plan. If you don't have one yet, we start there. Prices above are starting points; your written quote may vary with property size and access.</p>
   </div>
 </section>
 
@@ -259,7 +337,7 @@ footer p{margin:0 0 .8em;max-width:60em}
       <p class="eyebrow" style="color:#9cc5b5">Know the rules</p>
       <h2>Fire season rules in Nova Scotia</h2>
       <div class="row">
-        <div><b>Season</b><br>Wildfire risk season runs March 15 to October 15.</div>
+        <div><b>Season</b><br>Wildfire season runs March 15 to October 15.</div>
         <div><b>Daily burn check</b><br>Restrictions update at 2 p.m. daily. No brush burning or campfires from 8 a.m. to 2 p.m. during the season.</div>
         <div><b>The fine</b><br>Breaking burn restrictions can carry a $25,000 fine.</div>
         <div><b>Report a fire</b><br>Call 1-800-565-2224 or 911.</div>
